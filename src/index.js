@@ -1,1 +1,1 @@
-console.log("this is entry s");
+console.log("this is entry!");

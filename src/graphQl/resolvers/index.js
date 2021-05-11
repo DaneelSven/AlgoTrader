@@ -1,8 +1,6 @@
-const {
-    mergeResolvers
-} = require("@graphql-tools/merge");
-const coinResolver = require('./coin')
+const { mergeResolvers } = require("@graphql-tools/merge");
+const coinResolver = require("./coin");
 
-export const resolvers = [coinResolver];
+const resolvers = [coinResolver];
 
-module.exports = mergeResolvers(resolvers)
+module.exports = mergeResolvers(resolvers);

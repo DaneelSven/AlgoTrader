@@ -1,25 +1,25 @@
-import { ApolloServer } from "apollo-server-express";
+import { ApolloServer, gql, makeExecutableSchema } from "apollo-server-express";
 import express from "express";
 //import typeDefs from './src/graphql/schema/typeDefs/index.js'
-const typeDefs = require("../src/graphQl/schema/index");
-const resovlers = require("../src/graphQl/resolvers/index");
-
-const mongoose = require("mongoose");
+const typeDefs = require("./graphQl/schema/index");
+const resolvers = require("./graphQl/resolvers/index");
+import mongoose from "mongoose";
+import { Cat } from "./graphQl/models/Cat";
 
 const startServer = async () => {
   const app = express();
 
   const server = new ApolloServer({
     typeDefs,
-    resovlers,
+    resolvers,
   });
 
   server.applyMiddleware({
     app,
   });
 
-  const dbString = "mongodb://localhost:27017/coin";
-  const config = { useNewUrlParser: true, useUnifiedTopology: true };
+  const dbString = "mongodb://localhost:27017/algotrader";
+  const config = { useNewUrlParser: true };
 
   console.log(`Connecting to ${dbString}`);
   await mongoose

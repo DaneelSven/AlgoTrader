@@ -1,6 +1,7 @@
 const Coin = require("../models/Coin");
+import { Cat } from "../models/Cat";
 
-export const coinResolver = {
+const coinResolver = {
   Query: {
     getCoin: async (parent, args) => {
       try {
@@ -17,6 +18,9 @@ export const coinResolver = {
         throw new Error(error);
       }
     },
+  },
+
+  Mutation: {
     createCoin: async (parent, args) => {
       try {
         const { coinInput } = args;
@@ -30,6 +34,7 @@ export const coinResolver = {
         throw new Error(error);
       }
     },
+
     updateCoin: async (parent, args) => {
       try {
         const { coinId, coinInput } = args;
@@ -40,7 +45,7 @@ export const coinResolver = {
         throw new Error(error);
       }
     },
-    updateCoin: async (parent, args) => {
+    deleteCoin: async (parent, args) => {
       try {
         const { coinId } = args;
         return await Coin.findByIdAndDelete(coinId);

@@ -6,6 +6,11 @@ const typeDefs = gql`
     description: String
     amount: Int
   }
+
+  type Cat {
+    id: ID!
+    name: String
+  }
 `;
 
 module.exports = typeDefs;
