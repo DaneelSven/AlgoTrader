@@ -1,10 +1,8 @@
-import { ApolloServer, gql, makeExecutableSchema } from "apollo-server-express";
+import { ApolloServer } from "apollo-server-express";
 import express from "express";
-//import typeDefs from './src/graphql/schema/typeDefs/index.js'
 const typeDefs = require("./graphQl/schema/index");
 const resolvers = require("./graphQl/resolvers/index");
 import mongoose from "mongoose";
-import { Cat } from "./graphQl/models/Cat";
 
 const startServer = async () => {
   const app = express();

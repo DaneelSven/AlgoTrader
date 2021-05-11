@@ -1,5 +1,4 @@
 const Coin = require("../models/Coin");
-import { Cat } from "../models/Cat";
 
 const coinResolver = {
   Query: {
