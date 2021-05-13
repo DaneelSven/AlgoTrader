@@ -1,0 +1,65 @@
+<mxfile>
+    <diagram id="eS0nCfSoyP2RjvZEtmkr" name="Page-1">
+        <mxGraphModel dx="1118" dy="1057" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="ID: String&lt;br&gt;FocusedCoin: String&lt;br&gt;CoinPairInfo: [ {&lt;br&gt;BasePair: String,&lt;br&gt;CounterPair: String,&lt;br&gt;ExchangeRate: String,&lt;br&gt;PriceUSD: Number,&lt;br&gt;Volume24h: Number,&lt;br&gt;DataTime: String,&lt;br&gt;AverageGasFee24H: Number }]" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="691" y="591" width="172" height="172" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="TradingPairSchema" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="691" y="554" width="172" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.006;entryY=0.547;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=4;strokeColor=#000000;" edge="1" parent="1" source="4" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="562" y="685"/>
+                            <mxPoint x="562" y="685"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="ID: String&lt;br&gt;ExchangeName: String&lt;br&gt;TraidingPairs: [TradingPairSchema]" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="397" y="617" width="134" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="ExchangeSchema" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="397" y="580" width="134" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font color=&quot;#000000&quot;&gt;Exchange =&amp;gt; TraidingPair&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="534" y="656" width="148" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=4;" edge="1" parent="1" source="10" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="889" y="984"/>
+                            <mxPoint x="889" y="984"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="GasFees: [GasFee]&lt;br&gt;&lt;br&gt;estimate [{&lt;br&gt;averageGasFee: Number,&lt;br&gt;Aggregation: {&lt;br&gt;Hour_1: Number,&lt;br&gt;Hour_12: Number,&lt;br&gt;Hour_24: Number&lt;br&gt;},&lt;br&gt;&lt;br&gt;Asymmetry: [{&lt;br&gt;Range: Number,&lt;br&gt;&lt;br&gt;DateTimeRange: {&lt;br&gt;StartTime : Date,&lt;br&gt;EndTime: Date&amp;nbsp;}&lt;br&gt;}]" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="877" width="149" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="GasFeeAggregation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="840" width="149" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="FirstExchangeId: String&lt;br&gt;SecondExchangeId: String&lt;br&gt;TradingPair: String&lt;br&gt;ArbitrageCoin: [ {&lt;br&gt;FocusedPair: String,&lt;br&gt;PriceUSD: Number,&lt;br&gt;Volume1h: Number&lt;br&gt;}]&lt;br&gt;ProfitableOppertunities: {&lt;br&gt;lowEnd: {&lt;br&gt;FlashLoanRequired: Number,&lt;br&gt;ReasnableGasFee, Number,&lt;br&gt;LowestArbitrage: Number,&lt;br&gt;},&lt;br&gt;Average: {&lt;br&gt;FlashLoanRequired: Number,&lt;br&gt;ReasnableGasFee, Number,&lt;br&gt;AverageArbitrage: Number,&lt;br&gt;},&lt;br&gt;HighEnd: {&lt;br&gt;FlashLoanRequired: Number,&lt;br&gt;ReasnableGasFee, Number,&lt;br&gt;HighestArbitrage: Number,&lt;br&gt;},&lt;br&gt;}" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="408" y="845" width="180" height="386" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Arbitrage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="408" y="810" width="180" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="GasFeeUsd: String&lt;br&gt;GasFeeGwei: Number&lt;br&gt;DateRecorded: Date" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="945" y="941" width="137" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="GasFee" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="945" y="904" width="137" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Name: String&lt;br&gt;Description: String&lt;br&gt;Contract_address: String&lt;br&gt;Owner_address: String&lt;br&gt;Active: Boolean" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1021" y="1188" width="137" height="137" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Contract" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1021" y="1151" width="137" height="36" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
