@@ -7,9 +7,12 @@ const typeDefs = gql`
     amount: Int
   }
 
-  type Cat {
-    id: ID!
+  type Contract {
     name: String
+    description: String
+    contract_address: String
+    owner_address: String
+    active: Boolean
   }
 `;
 
