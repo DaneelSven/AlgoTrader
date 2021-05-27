@@ -1,0 +1,6 @@
+AlgoTraderBot/node_modules/
+.env
+package-lock.json
+src/abis
+.idea
+AlgoTraderAngular/
